@@ -13,9 +13,11 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <p className="time-part">时间:{new Date().toLocaleTimeString()}</p>
       </div>
     );
   }
-}
+};
+
 
 export default App;
