@@ -2,7 +2,34 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-class App extends Component {
+
+class Time extends React.Component {
+    constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+  }
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+  render() {
+    return this.state.date.toLocaleTimeString();
+  }
+}
+
+class App extends React.Component {
   render() {
     return (
       <div className="App">
@@ -13,11 +40,12 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <p className="time-part">时间:{new Date().toLocaleTimeString()}</p>
+        <p className="time-part">时间:<Time/></p>
       </div>
     );
   }
 };
+
 
 
 export default App;
