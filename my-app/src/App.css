@@ -1,3 +1,10 @@
+*{
+  padding:0;
+  margin:0;
+}
+ul{
+  list-style: none;
+}
 .App {
   text-align: center;
 }
@@ -20,6 +27,23 @@
 
 .App-intro {
   font-size: large;
+}
+
+.btn-click,.taggle,.login{
+  background:#f86442;
+  color:#fff;
+  padding:10px 30px;
+  border:1px solid #f86442;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+.login,.btn-click{
+  margin-top:0;
+}
+.warning{
+  background:#f00;
+  line-height:50px;
 }
 
 @keyframes App-logo-spin {
