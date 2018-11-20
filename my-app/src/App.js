@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import React from 'react';
+import Comp from './proptypes/new/index';
 
 class App extends React.Component {
   render() {
-    return <div>1111</div>
+    return <Comp />;
   }
-};
-
-
+}
 
 export default App;
